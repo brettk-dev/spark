@@ -1,9 +1,9 @@
 import { shallowMount } from "@vue/test-utils";
-import { name } from "./{name}.vue";
+import {{name}} from "./{{name}}.vue";
 
-describe("HelloWorld", () => {
+describe("{{name}}", () => {
   let component;
   beforeEach(() => {
-    component = shallowMount({ name });
+    component = shallowMount({{name}});
   });
 });

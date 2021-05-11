@@ -41,7 +41,7 @@ fn generate_vue(name: &str, dir: &str) {
 
   let component_template = include_str!("./templates/vue/Component.vue");
   let test_template = include_str!("./templates/vue/Component.test.js");
-  let test_contents = str::replace(test_template, "{name}", name);
+  let test_contents = str::replace(test_template, "{{name}}", name);
 
   create_file(&generate_filename(name, dir, "vue"), &component_template);
   create_file(&generate_filename(name, dir, "spec.js"), &test_contents);
